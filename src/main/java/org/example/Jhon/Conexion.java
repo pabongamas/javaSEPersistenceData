@@ -12,9 +12,6 @@ public class Conexion {
         Connection connection=null;
         try {
             connection=DriverManager.getConnection(url,user,pass);
-            if(connection!=null){
-                System.out.println("se realizo conexion ");
-            }
         } catch (SQLException e) {
             System.out.println(e);
         }
