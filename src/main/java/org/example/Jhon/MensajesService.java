@@ -44,10 +44,24 @@ public class MensajesService {
     }
 
     public static void borrarMensaje() {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Indica el id del mensaje a borrar");
+        int id_mensaje = sc.nextInt();
+        MensajesDAO.borrarMensajeDB(id_mensaje);
     }
 
     public static void editarMensaje() {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Escribe el nuevo mensaje ");
+        String mensajeString = sc.nextLine();
+        
+        System.out.println("Indica el id del mensaje a Actualizar ");
+        int id_mensaje = sc.nextInt();
+        Mensajes mensaje = new Mensajes();
+        mensaje.setId_mensaje(id_mensaje);
+        mensaje.setMensaje(mensajeString);
+        MensajesDAO.actualizarMensajeDB(mensaje);
 
     }
 }
