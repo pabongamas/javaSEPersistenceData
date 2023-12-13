@@ -28,12 +28,10 @@ public class Main {
                     break;
                 case 3:
                     MensajesService.borrarMensaje();
-
                     break;
                 case 4:
                     MensajesService.editarMensaje();
                     break;
-
                 default:
                     break;
             }
