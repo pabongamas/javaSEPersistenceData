@@ -1,10 +1,11 @@
 package org.example.Jhon.Models;
 
 public class Mensajes {
-    public int id_mensaje;
-    public String mensaje;
-    public String autor_mensaje;
-    public String fecha_mensaje;
+    private int id_mensaje;
+    private int id_usuario;
+    private String mensaje;
+    private String autor_mensaje;
+    private String fecha_mensaje;
 
     
 
@@ -12,11 +13,22 @@ public class Mensajes {
     }
     
 
-    public Mensajes(int id_mensaje, String mensaje, String autor_mensaje, String fecha_mensaje) {
+    public Mensajes(int id_mensaje, int id_usuario, String mensaje, String autor_mensaje, String fecha_mensaje) {
         this.id_mensaje = id_mensaje;
+        this.id_usuario = id_usuario;
         this.mensaje = mensaje;
         this.autor_mensaje = autor_mensaje;
         this.fecha_mensaje = fecha_mensaje;
+    }
+
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
 
@@ -52,10 +64,13 @@ public class Mensajes {
         this.fecha_mensaje = fecha_mensaje;
     }
 
+
     @Override
     public String toString() {
-        return "Mensajes [id_mensaje=" + id_mensaje + ", mensaje=" + mensaje + ", autor_mensaje=" + autor_mensaje
-                + ", fecha_mensaje=" + fecha_mensaje + "]";
+        return "Mensajes [id_mensaje=" + id_mensaje + ", id_usuario=" + id_usuario + ", mensaje=" + mensaje
+                + ", autor_mensaje=" + autor_mensaje + ", fecha_mensaje=" + fecha_mensaje + "]";
     }
+
+    
 
 }
